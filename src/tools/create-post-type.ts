@@ -2,18 +2,18 @@ import { z } from "zod";
 import { buildHeaders, buildBody } from "./types";
 
 export const createPostTypeSchema = {
-	"x-allmedia-api-key": z.string().optional(),
-	"x-allmedia-user-id": z.string().optional(),
-	"x-allmedia-global-api-key": z.string().optional(),
-	"x-allmedia-team": z.string().optional(),
-	"x-allmedia-webhook-response-url": z.string().optional(),
-	"x-allmedia-tenant": z.string().optional(),
-	post_type_max_length_words: z.number().optional(),
-	post_type_min_length_words: z.number().optional(),
+	"x-allmedia-api-key": z.string(),
+	"x-allmedia-user-id": z.string(),
+	"x-allmedia-global-api-key": z.string(),
+	"x-allmedia-team": z.string(),
+	"x-allmedia-webhook-response-url": z.string(),
+	"x-allmedia-tenant": z.string(),
+	post_type_max_length_words: z.number(),
+	post_type_min_length_words: z.number(),
 	post_type_name: z.string(),
 	post_type_description: z.string(),
 	post_type_content_structure: z.string(),
-	post_type_example_posts: z.string().optional(),
+	post_type_example_posts: z.string(),
 };
 
 export async function createPostType(params: Record<string, any>) {

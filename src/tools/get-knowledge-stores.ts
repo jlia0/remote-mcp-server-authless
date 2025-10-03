@@ -2,13 +2,13 @@ import { z } from "zod";
 import { buildHeaders, buildBody } from "./types";
 
 export const getKnowledgeStoresSchema = {
-	"x-allmedia-api-key": z.string().optional(),
-	"x-allmedia-user-id": z.string().optional(),
-	"x-allmedia-global-api-key": z.string().optional(),
-	"x-allmedia-team": z.string().optional(),
-	"x-allmedia-conversation-id": z.string().optional(),
-	"x-allmedia-webhook-response-url": z.string().optional(),
-	"x-allmedia-tenant": z.string().optional(),
+	"x-allmedia-api-key": z.string(),
+	"x-allmedia-user-id": z.string(),
+	"x-allmedia-global-api-key": z.string(),
+	"x-allmedia-team": z.string(),
+	"x-allmedia-conversation-id": z.string(),
+	"x-allmedia-webhook-response-url": z.string(),
+	"x-allmedia-tenant": z.string(),
 };
 
 export async function getKnowledgeStores(params: Record<string, any>) {

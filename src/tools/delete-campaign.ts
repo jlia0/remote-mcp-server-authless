@@ -2,16 +2,16 @@ import { z } from "zod";
 import { buildHeaders, buildBody } from "./types";
 
 export const deleteCampaignSchema = {
-	"x-allmedia-api-key": z.string().optional(),
-	"x-allmedia-user-id": z.string().optional(),
-	"x-allmedia-global-api-key": z.string().optional(),
-	"x-allmedia-team": z.string().optional(),
-	"x-allmedia-conversation-id": z.string().optional(),
-	"x-allmedia-webhook-response-url": z.string().optional(),
-	"x-allmedia-tenant": z.string().optional(),
-	campaign_name: z.string().optional(),
-	campaign_id: z.string().optional(),
-	delete_contents: z.enum(["true", "false"]).optional(),
+	"x-allmedia-api-key": z.string(),
+	"x-allmedia-user-id": z.string(),
+	"x-allmedia-global-api-key": z.string(),
+	"x-allmedia-team": z.string(),
+	"x-allmedia-conversation-id": z.string(),
+	"x-allmedia-webhook-response-url": z.string(),
+	"x-allmedia-tenant": z.string(),
+	campaign_name: z.string(),
+	campaign_id: z.string(),
+	delete_contents: z.enum(["true", "false"]),
 };
 
 export async function deleteCampaign(params: Record<string, any>) {
